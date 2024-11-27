@@ -1,4 +1,4 @@
-# Utilização do spacy juntamente com o TF-IDF
+# Utilização do spacy juntamente com o TF-IDF para extrair as partes mais relevantes de um texto
 
 import spacy
 from sklearn.feature_extraction.text import TfidfVectorizer

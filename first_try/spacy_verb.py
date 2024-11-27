@@ -1,15 +1,8 @@
-# Utilização do bow juntamente com o TF-IDF para extrair as palavras mais relevantes de um texto
+import spacy
 
-from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
-from nltk.corpus import stopwords
-import nltk
-import pandas as pd
+# Carregar o modelo de língua portuguesa
+nlp = spacy.load("pt_core_news_sm")
 
-# Permitir que haja stopwords em português
-nltk.download("stopwords")
-stop_words = stopwords.words("portuguese")
-
-# Sempre o mesmo texto de exemplo
 texto = """
 A Traço Têxtil, S.A. pretende um sistema de software para suportar o seu negócio. A
 Traço Têxtil dedica-se ao fabrico manual e customizado de fatos (ternos) de alta-
@@ -47,20 +40,19 @@ atividade. No decorrer da execução da Ordem de Fabrico, mais atividades, mesmo
 não planeadas, poderão ser associadas a essa Ordem de Fabrico.
 """
 
-# Vetorização usando CountVectorizer (Bag of Words)
-vectorizer = CountVectorizer(stop_words=stop_words)
-X_bow = vectorizer.fit_transform([texto])
-df_bow = pd.DataFrame(X_bow.toarray(), columns=vectorizer.get_feature_names_out())
+def processar_texto(texto):
+    # Processar o texto com spaCy
+    doc = nlp(texto)
 
-# Vetorização usando TfidfVectorizer
-tfidf_vectorizer = TfidfVectorizer(stop_words=stop_words)
-X_tfidf = tfidf_vectorizer.fit_transform([texto])
-df_tfidf = pd.DataFrame(
-    X_tfidf.toarray(), columns=tfidf_vectorizer.get_feature_names_out()
-)
+    # Extrair frases que contenham verbos e os verbos dessas frases
+    def extrair_frases_e_verbos(doc):
+        for i, sent in enumerate(doc.sents, 1):
+            verbos = [token.text for token in sent if token.pos_ == "VERB"]
+            if verbos:
+                print(f"Frase {i}: {sent.text.strip()}")
+                print(f"Verbos: {verbos}\n")
 
-# Exibir as palavras mais relevantes com TF-IDF
-top_terms = df_tfidf.T.sort_values(by=0, ascending=False).head(10)
+    # Processar e imprimir as frases e verbos
+    extrair_frases_e_verbos(doc)
 
-print("Top palavras mais relevantes com TF-IDF:")
-print(top_terms)
+processar_texto(texto)
