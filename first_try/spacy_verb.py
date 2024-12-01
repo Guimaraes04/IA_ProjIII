@@ -50,7 +50,7 @@ def processar_texto(texto):
 
     # Extrair frases que contenham verbos e os verbos dessas frases
     def extrair_frases_e_verbos(doc):
-        for i, sent in enumerate(doc.sents, 1):
+        for i, sent in enumerate(doc.sents, 0):
             verbos = [token.text for token in sent if token.pos_ == "VERB"]
             if verbos:
                 print(f"Frase {i}: {sent.text.strip()}")
