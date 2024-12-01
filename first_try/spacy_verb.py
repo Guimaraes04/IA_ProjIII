@@ -3,6 +3,10 @@ import spacy
 # Carregar o modelo de língua portuguesa
 nlp = spacy.load("pt_core_news_sm")
 
+palavras_chave = [
+    "corte", "costura", "consulta", "fatura", "atividade", "produto final", "entrega", "pagar", "processo de fabrico", "encomenda", "medidas", "especialista","observações","correções", "aceita", "planeadas", "estampagem", "tricotagem", "atividades", "não planeadas", "associadas", "fabrico", "manual", "customizado", "resposta", "processo", "atende", "percebe", "pretende", "cria", "série", "tira", "necessárias", "parte", "efetua", "escolhido", "corretas", "atividade", "produção", "associada", "montar", "ocorrer", "prova", "associa", "recolhidas", "deverá", "respetiva", "aproximar", "objetivos", "produzido", "entregue", "definir", "exemplo", "efetuar", "execução", "poderão", "iniciar", "necessita", "gerir", "especializada", "gerido", "adaptado", "inicia-se", "recebe", "criar", "ajustar", "associá-los", "identificada", "regista", "verifica", "seleciona", "registadas", "enviada", "prepara", "inicia", "registar", "detetados", "gerado", "acionado", "corrigir", "passa", "realizada", "permitir", "enviados", "incluir", "informado", "embalado", "preparado", "registando", "gerar", "anexá-la", "permitir", "alterar", "ajudando"
+]
+
 texto = """
 A Traço Têxtil, S.A. pretende um sistema de software para suportar o seu negócio. A
 Traço Têxtil dedica-se ao fabrico manual e customizado de fatos (ternos) de alta-
@@ -52,7 +56,14 @@ def processar_texto(texto):
                 print(f"Frase {i}: {sent.text.strip()}")
                 print(f"Verbos: {verbos}\n")
 
+    # Extrair frases que contêm palavras-chave
+    def destacar_frases_com_palavras_chave(doc, palavras_chave):
+        for i, sent in enumerate(doc.sents, 1):
+            if any(palavra in sent.text for palavra in palavras_chave):
+                print(f"{i} Frase com palavra-chave: {sent.text.strip()}\n")
+    
     # Processar e imprimir as frases e verbos
     extrair_frases_e_verbos(doc)
+    destacar_frases_com_palavras_chave(doc, palavras_chave)
 
 processar_texto(texto)
