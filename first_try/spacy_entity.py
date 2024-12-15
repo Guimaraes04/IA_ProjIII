@@ -46,7 +46,7 @@ def processar_texto(texto):
                     print(f"Entidade(s): {entidades}")
                     print(f"Palavras-chave: {palavras_encontradas}\n\n")
                     
-                    print(f"Como {entidades} estão associadas a {palavras_encontradas}?\n")
+                    print(f"Como {entidades} estão associadas as palavras {palavras_encontradas}?\n")
                     print("-------------------------------------------------------------------\n")
                     
     # Destacar e imprimir as frases que contêm palavras-chave, frases sem vírgulas, entidades e palavras-chave
