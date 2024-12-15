@@ -1,5 +1,5 @@
 import spacy
-import time  # Importar a biblioteca para manipular o tempo
+import time
 
 # Carregar o modelo de língua portuguesa
 nlp = spacy.load("pt_core_news_sm")
@@ -69,7 +69,6 @@ def processar_texto():
         # Aguardar 2 segundos antes de exibir as iterações aprovadas
         time.sleep(2)
 
-        # Mostrar as iterações aprovadas ou informar que não há resultados
         if aprovados:
             print("\n-------------------- Iterações aprovadas --------------------\n")
             for iteracao in aprovados:
