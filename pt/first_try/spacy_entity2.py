@@ -66,7 +66,7 @@ def processar_texto():
                         "palavras_chave": palavras_encontradas
                     })
 
-        # Aguardar 2 segundos antes de exibir as iterações aprovadas
+        # Aguardar 2 segundos
         time.sleep(2)
 
         if aprovados:
