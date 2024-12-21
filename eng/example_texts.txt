@@ -1,0 +1,27 @@
+1. Inventory Management System
+
+The Warehouse at GlobalTech Manufacturing requires an inventory management system to track stock levels and improve efficiency. The system must integrate RFID Scanners to automate the logging of incoming and outgoing materials. Additionally, the Database Server should store information about suppliers, products, and lot numbers. Alerts must be generated when Stock Levels fall below predefined thresholds, and the system should allow the Inventory Manager to create automated purchase orders to replenish stock.
+
+----------------------------------------------------------------------
+
+2. Production Line Monitoring
+
+At GreenFactory, the Production Line requires a monitoring system to ensure operational efficiency. The Sensors installed on the Conveyor Belts should provide real-time data to a central Control Room. The system must notify the Maintenance Team of any irregularities, such as temperature spikes or machine downtimes. Data from the PLC (Programmable Logic Controller) should be logged into the Analytics Platform for performance evaluation and process optimization.
+
+----------------------------------------------------------------------
+
+3. Predictive Maintenance Solution
+
+SmartTools Co. needs a predictive maintenance system to reduce downtime in its CNC Machines. The system must use IoT Sensors to monitor vibration, temperature, and usage hours. The collected data should be sent to the Central Monitoring Server, where a machine-learning algorithm can predict potential failures. The system should notify the Technical Supervisor when maintenance is needed and automatically schedule tasks for the Maintenance Team.
+
+----------------------------------------------------------------------
+
+4. Energy Management Platform
+
+EcoFactory wants an energy management platform to optimize electricity usage across its Manufacturing Units. The platform should integrate Smart Meters installed in different departments, such as Assembly and Packaging. A central Dashboard should display energy usage patterns and provide insights into reducing waste. The system should allow the Energy Manager to configure usage limits and automatically generate alerts when those limits are exceeded.
+
+----------------------------------------------------------------------
+
+5. Customer Feedback System
+
+TechPro Industries requires a customer feedback system for its After-Sales Support Team. The system must collect feedback from Customer Portals and Mobile Applications. Data should be stored in a centralized CRM Database and categorized by product type. A reporting tool should provide the Quality Assurance Manager with insights into recurring issues, helping to prioritize product improvements and service enhancements.

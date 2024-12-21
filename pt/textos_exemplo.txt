@@ -1,6 +1,6 @@
 TEXTO DE ES1
 
-A Traço Têxtil, S.A. pretende um sistema de software para suportar o seu negócio. A
+A Traço Têxtil pretende um sistema de software para suportar o seu negócio. A
 Traço Têxtil dedica-se ao fabrico manual e customizado de fatos (ternos) de alta-
 costura, para homem e mulher. Cada fato é fabricado em resposta a uma encomenda
 de um cliente, através de um processo manual que envolve diversos funcionários.
@@ -37,7 +37,7 @@ não planeadas, poderão ser associadas a essa Ordem de Fabrico.
 
 TEXTOS GERADOS PELO CHATGPT
 
-A GlobalPrint Solutions, Lda. necessita de um sistema de software para gerir os seus serviços de impressão e personalização de materiais gráficos. A GlobalPrint é especializada na produção de cartazes, cartões de visita, panfletos, calendários e outros materiais personalizados para empresas e clientes individuais. Cada projeto é gerido de forma independente e adaptado às necessidades específicas do cliente.
+A GlobalPrint Solutions necessita de um sistema de software para gerir os seus serviços de impressão e personalização de materiais gráficos. A GlobalPrint é especializada na produção de cartazes, cartões de visita, panfletos, calendários e outros materiais personalizados para empresas e clientes individuais. Cada projeto é gerido de forma independente e adaptado às necessidades específicas do cliente.
 O processo inicia-se com um(a) Designer Gráfico, que recebe do cliente um pedido detalhado. O(a) Designer é responsável por criar ou ajustar os modelos gráficos e associá-los a uma nova Ordem de Produção, identificada por um número único. Caso o cliente seja novo, o(a) Designer regista no sistema os dados do cliente, incluindo nome, contacto, tipo de cliente (individual ou empresa) e histórico de pedidos.
 Após a criação da Ordem de Produção, um(a) Técnico de Impressão verifica os detalhes do projeto e seleciona os materiais necessários, como tipo de papel, gramatura, cores de tinta e acabamentos (ex.: laminação, verniz). Todas as especificações são registadas no sistema, incluindo observações técnicas, prazos e quantidade de unidades a produzir.
 Em seguida, a Ordem de Produção é enviada para a fila de produção. Um(a) Operador(a) de Máquina prepara os equipamentos e inicia o processo de impressão. Durante a impressão, o sistema deve registar automaticamente os dados da produção, como tempo gasto, consumo de materiais e possíveis defeitos detectados. Se houver algum problema técnico, um alerta é gerado, e um(a) Técnico de Manutenção é acionado(a) para corrigir a falha.
@@ -47,7 +47,7 @@ Além disso, o sistema deve permitir a inclusão de pedidos urgentes, que podem 
 
 ------------------------------------------
 
-A TechHome Assistência Técnica, Lda. necessita de um sistema de software para gerir os seus serviços de manutenção e reparação de equipamentos domésticos, como eletrodomésticos, sistemas de aquecimento e dispositivos inteligentes. A TechHome presta assistência técnica personalizada, garantindo um acompanhamento completo desde o pedido inicial até à resolução do problema e avaliação final.
+A TechHome Assistência Técnica necessita de um sistema de software para gerir os seus serviços de manutenção e reparação de equipamentos domésticos, como eletrodomésticos, sistemas de aquecimento e dispositivos inteligentes. A TechHome presta assistência técnica personalizada, garantindo um acompanhamento completo desde o pedido inicial até à resolução do problema e avaliação final.
 O processo começa quando um cliente contacta a empresa, seja por telefone, e-mail ou através de uma aplicação online. Um(a) Assistente de Atendimento regista no sistema os detalhes do pedido, incluindo os dados do cliente (nome, contacto, morada), a descrição do problema, o tipo de equipamento e, se aplicável, o modelo e número de série do mesmo. Caso o cliente já tenha um histórico de reparações, o sistema deve recuperar os dados automaticamente para facilitar o atendimento.
 Com base no pedido, o sistema atribui automaticamente a solicitação a um(a) Técnico(a) com as competências necessárias para resolver o problema. O sistema deve permitir o agendamento da visita técnica, tendo em conta a disponibilidade do cliente e do técnico, gerando uma Ordem de Serviço com todos os detalhes necessários.
 No local, o(a) Técnico(a) utiliza um dispositivo móvel para aceder à Ordem de Serviço e registar as atividades realizadas, incluindo diagnóstico, peças substituídas, tempo despendido e observações adicionais. Caso o equipamento precise de ser reparado na oficina da empresa, o sistema deve permitir a criação de uma nova tarefa interna para monitorizar o transporte e a reparação.
