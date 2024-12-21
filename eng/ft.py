@@ -16,21 +16,6 @@ while True:
     linhas.append(linha)
 texto = "\n".join(linhas)
 
-def extract_functional_requirements(text):
-    doc = nlp(text) # Processar o texto
-
-    requirements = []
-    
-    for sent in doc.sents:  # Iterar por sentenças
-        entities = [ent.text for ent in sent.ents]  # Extrair entidades dessa sentença
-        for entity in entities:
-            requirement = (
-                f"The requirement related to '{entity}' is: {sent.text.strip()}"
-            )
-            requirements.append(requirement)
-
-    return requirements
-
 def translate_to_portuguese(requirements):
     
     translator = Translator()
