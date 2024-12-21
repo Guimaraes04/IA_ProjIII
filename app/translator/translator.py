@@ -1,5 +1,6 @@
 from googletrans import Translator
 
+
 class RequirementsTranslator:
     def __init__(self):
         pass
