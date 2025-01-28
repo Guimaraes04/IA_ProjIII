@@ -18,12 +18,12 @@ EcoFactory wants an energy management platform to optimize electricity usage acr
 
 4. Customer Feedback System
 
-TechPro Industries requires a customer feedback system for its after-sales support team. Data should be stored by a consultant in a centralized crm db and categorized by product type. A reporting tool should provide the quality assurance manager with insights into recurring issues, helping to prioritize product improvements and service enhancements.
+TechPro Industries requires a customer feedback system for its after-sales support group. Data should be stored by a consultant in a centralized crm db and categorized by product type. A reporting tool should provide the quality assurance manager with insights into recurring issues, helping to prioritize product improvements and service enhancements.
 ----------------------------------------------------------------------
 
 5. Exercicio teste
 
-You want a software system to support your business. Textile Trace is dedicated to the manual and customized manufacture of haute couture suits for men and women. Each suit is manufactured in response to a customer order, through a manual process involving several workers.
+You want a software system to support your business. Textile trace is dedicated to the manual and customized manufacture of haute couture suits for men and women. Each suit is manufactured in response to a customer order, through a manual process involving several workers.
 First, a consultant meets the customer, understands what they want and creates a new manufacturing order in the system, which has a serial number associated with it. If it is the client's first consultation, the consultant: takes the necessary measurements from the client (height, weight, distance between shoulders, chest circumference, abdominal circumference, distance between neck and thumb, neck measurement, pants length) and creates the customer in the system.
 The manufacturing order information also includes the type of fabric, buttons, and notes on the desired finishes.
 Then, a garment cutting specialist cuts individual pieces (sleeves, body, legs) from the chosen fabric and to the correct dimensions. This cutting activity, as well as all other possible activities (e.g.: consultation, sewing) for the production of this costume, is associated with the manufacturing order. An activity has information about the date, activity description, and observations, and is always associated with a manufacturing order.
