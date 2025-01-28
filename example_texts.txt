@@ -1,27 +1,61 @@
 1. Inventory Management System
 
-The Warehouse at GlobalTech Manufacturing requires an inventory management system to track stock levels and improve efficiency. The system must integrate RFID Scanners to automate the logging of incoming and outgoing materials. Additionally, the Database Server should store information about suppliers, products, and lot numbers. Alerts must be generated when Stock Levels fall below predefined thresholds, and the system should allow the Inventory Manager to create automated purchase orders to replenish stock.
+The Warehouse at GlobalTech Manufacturing requires an inventory management system to track stock levels and improve efficiency. The system must integrate RFID Scanners to automate the logging of incoming and outgoing materials. Additionally, the database server should store information about suppliers, products, and lot numbers. Alerts must be generated when stock levels fall below predefined thresholds, and the system should allow the inventory manager to create automated purchase orders to replenish stock.
 
 ----------------------------------------------------------------------
 
 2. Production Line Monitoring
 
-At GreenFactory, the Production Line requires a monitoring system to ensure operational efficiency. The Sensors installed on the Conveyor Belts should provide real-time data to a central Control Room. The system must notify the Maintenance Team of any irregularities, such as temperature spikes or machine downtimes. Data from the PLC (Programmable Logic Controller) should be logged into the Analytics Platform for performance evaluation and process optimization.
+At GreenFactory, the production line requires a monitoring system to ensure operational efficiency. The sensors installed on the conveyor belts should provide real-time data to a central control room. The system must notify the maintenance team of any irregularities, such as temperature spikes or machine downtimes. Data from the PLC (Programmable Logic Controller) should be logged into the analytics platform for performance evaluation and process optimization.
 
 ----------------------------------------------------------------------
 
-3. Predictive Maintenance Solution
+3. Energy Management Platform
 
-SmartTools Co. needs a predictive maintenance system to reduce downtime in its CNC Machines. The system must use IoT Sensors to monitor vibration, temperature, and usage hours. The collected data should be sent to the Central Monitoring Server, where a machine-learning algorithm can predict potential failures. The system should notify the Technical Supervisor when maintenance is needed and automatically schedule tasks for the Maintenance Team.
-
-----------------------------------------------------------------------
-
-4. Energy Management Platform
-
-EcoFactory wants an energy management platform to optimize electricity usage across its Manufacturing Units. The platform should integrate Smart Meters installed in different departments, such as Assembly and Packaging. A central Dashboard should display energy usage patterns and provide insights into reducing waste. The system should allow the Energy Manager to configure usage limits and automatically generate alerts when those limits are exceeded.
+EcoFactory wants an energy management platform to optimize electricity usage across its manufacturing units. The platform should integrate smart meters installed in different departments, such as assembly and packaging. A central dashboard should display energy usage patterns and provide insights into reducing waste. The system should allow the energy manager to configure usage limits and automatically generate alerts when those limits are exceeded.
 
 ----------------------------------------------------------------------
 
-5. Customer Feedback System
+4. Customer Feedback System
 
-TechPro Industries requires a customer feedback system for its After-Sales Support Team. The system must collect feedback from Customer Portals and Mobile Applications. Data should be stored in a centralized CRM Database and categorized by product type. A reporting tool should provide the Quality Assurance Manager with insights into recurring issues, helping to prioritize product improvements and service enhancements.
+TechPro Industries requires a customer feedback system for its after-sales support team. Data should be stored by a consultant in a centralized crm database and categorized by product type. A reporting tool should provide the quality assurance manager with insights into recurring issues, helping to prioritize product improvements and service enhancements.
+----------------------------------------------------------------------
+
+5. Exercicio teste
+
+You want a software system to support your business. Textile Trace is dedicated to the manual and customized manufacture of haute couture suits for men and women. Each suit is manufactured in response to a customer order, through a manual process involving several workers.
+First, a consultant meets the customer, understands what they want and creates a new manufacturing order in the system, which has a serial number associated with it. If it is the client's first consultation, the consultant: takes the necessary measurements from the client (height, weight, distance between shoulders, chest circumference, abdominal circumference, distance between neck and thumb, neck measurement, pants length) and creates the customer in the system.
+The manufacturing order information also includes the type of fabric, buttons, and notes on the desired finishes.
+Then, a garment cutting specialist cuts individual pieces (sleeves, body, legs) from the chosen fabric and to the correct dimensions. This cutting activity, as well as all other possible activities (e.g.: consultation, sewing) for the production of this costume, is associated with the manufacturing order. An activity has information about the date, activity description, and observations, and is always associated with a manufacturing order.
+Then, a tailor sews the various pieces together to assemble the coat, jacket and pants of the suit.
+Between each consultation, a tailor performs the necessary sewing and corrections to bring the final product closer to the client's objectives and taste.
+After a final consultation, where the client accepts the final product, the produced costume will be delivered to the client, along with the invoice to be paid.
+Before starting a manufacturing order, a process planner defines the planned activities associated with the manufacturing order (e.g.: cutting parts, sewing, finishing, printing, knitting). During the execution of the manufacturing order, more activities, even unplanned ones, can be associated with this manufacturing order. 
+
+----------------------------------------------------------------------
+
+6. 1º Exercício professor Miguel
+
+Mr. Asdrúbal has a traditional tavern, where he also sells some products. In his tavern, Mr. Asdrúbal keeps a list of his regular customers. These customers can spend money during the week and only pay in full at the end of the week. Whenever a new customer becomes a regular customer, a worker open a new customer file, where the various expenses incurred and payments made are recorded. Each expense is associated with a product sold (consumed), a quantity, and has a date, total value and indication of whether it has already been paid or not, and on what date. The accountant issues an invoice/receipt whenever a customer makes a payment for one or more charges on their account.
+In addition to the previous work, the accountant selects from a product table, which contains product information (name, unit price) and the quantity of that product in stock. Some restrictions imposed are: A customer can never have a total debt greater than €100; A customer should never have unpaid expenses for more than 15 days.
+
+----------------------------------------------------------------------
+
+7. 2º Exercício professor Miguel
+
+The Urban Waste Management Company GesUrb wants a software system to support its business. A worker collects urban waste in the village of alcabideche and promotes its recycling. To this end, GesUrb offers differentiated waste collection. Differentiated collection allows each type of waste to be recycled, and rewards residents who place the largest quantity of differentiated waste in the bins.
+When a citizen needs it, a secretary employee will help them create a new contract, change or cancel their urban solid waste collection contract, by contacting the GesUrb press office.
+When creating a new contract, the citizen provides their data and the data of their place of consumption. When making a new contract, the citizen receives a new container for each type of waste, with an NFC tag that has a container identification code.
+When delivering waste, the citizen goes to a large container at a collection point and, when bringing his/her personal container closer to the large collection container, the latter opens the lid automatically, only if the type of waste of both containers (the citizen's and the collection container) is the same.
+When the person dumps their container in the collection point container, an analyst records the weight of the deposited waste is recorded and, through artificial intelligence, it is analyzed and validated that the deposited waste is of the right type. In this case, an analyst creates a credit movement of points for the citizen, indicating the date and time of collection, weight and type of waste, and points earned. The points earned by each resident, for each Kg of waste collected, depends on the type of waste and must be defined in a table in the system.
+If the type of waste deposited is different from that for which the collector is intended, then an anomaly movement is created, where 20 points are deducted for each kg of waste deposited.
+A clerical worker can also create, list and modify waste collection routes, which are then selected at the start of a waste collection activity by the collection truck driver.
+A collection point has different collectors for all types of waste.
+Before starting waste collection, the driver of the collection truck starts a collection activity in the system, where he selects the type of waste to be collected, as well as the route of collection points to be covered. The collection truck, in a collection activity, collects only one type of waste.
+One of the employees of the waste collection team, during a collection activity, records a collection movement in the system whenever the truck stops at a collection point and the waste is collected from a container.
+
+----------------------------------------------------------------------
+
+YT Video
+
+https://www.youtube.com/watch?v=dSce20oYIPY 
