@@ -1,6 +1,6 @@
 1. Inventory Management System
 
-The Warehouse at GlobalTech Manufacturing requires an inventory management system to track stock levels and improve efficiency. The system must integrate RFID Scanners to automate the logging of incoming and outgoing materials. Additionally, the database server should store information about suppliers, products, and lot numbers. Alerts must be generated when stock levels fall below predefined thresholds, and the system should allow the inventory manager to create automated purchase orders to replenish stock.
+The Warehouse at GlobalTech Manufacturing requires an inventory management system to track stock levels and improve efficiency. The system must integrate RFID scanners to automate the logging of incoming and outgoing materials. Additionally, the database server should store information about suppliers, products, and lot numbers. Alerts must be generated when stock levels fall below predefined thresholds, and the system should allow the inventory manager to create automated purchase orders to replenish stock.
 
 ----------------------------------------------------------------------
 
@@ -18,7 +18,7 @@ EcoFactory wants an energy management platform to optimize electricity usage acr
 
 4. Customer Feedback System
 
-TechPro Industries requires a customer feedback system for its after-sales support team. Data should be stored by a consultant in a centralized crm database and categorized by product type. A reporting tool should provide the quality assurance manager with insights into recurring issues, helping to prioritize product improvements and service enhancements.
+TechPro Industries requires a customer feedback system for its after-sales support team. Data should be stored by a consultant in a centralized crm db and categorized by product type. A reporting tool should provide the quality assurance manager with insights into recurring issues, helping to prioritize product improvements and service enhancements.
 ----------------------------------------------------------------------
 
 5. Exercicio teste
