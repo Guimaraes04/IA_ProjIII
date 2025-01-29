@@ -19,6 +19,7 @@ EcoFactory wants an energy management platform to optimize electricity usage acr
 4. Customer Feedback System
 
 TechPro Industries requires a customer feedback system for its after-sales support group. Data should be stored by a consultant in a centralized crm db and categorized by product type. A reporting tool should provide the quality assurance manager with insights into recurring issues, helping to prioritize product improvements and service enhancements.
+
 ----------------------------------------------------------------------
 
 5. Exercicio teste
