@@ -2,21 +2,19 @@ import spacy
 
 
 class RequirementsExtractor:
-    def __init__(self):
-        self.npl = spacy.load("en_core_web_sm")
+    def __init__(self, key_list):
+        self.nlp = spacy.load("en_core_web_sm")
+        self.key_list = set(key_list)
 
     def extract_functional_requirements(self, text):
-        doc = self.npl(text)  # Processar o texto
-
+        doc = self.nlp(text)  # Processar o texto
         requirements = []
 
         for sent in doc.sents:  # Iterar por frases
-            entities = [ent.text for ent in sent.ents]  # Extrair entidades dessa frase
-
-            for entity in entities:
-                requirement = (
-                    f"The requirement related to '{entity}' is: {sent.text.strip()}"
-                )
-                requirements.append(requirement)
+            tokens = [token.text.lower() for token in sent]  # Converter tokens para lowercase
+            
+            # Se a frase contém pelo menos uma palavra-chave, adicionamos como requisito funcional
+            if any(word in tokens for word in self.key_list):
+                requirements.append(sent.text.strip())
 
         return requirements
