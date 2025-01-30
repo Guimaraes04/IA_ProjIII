@@ -1,7 +1,12 @@
+from app.verb.verb_extractor import VerbFinder
 from app.entities.analyse_entities import AnalyseEntities
 from app.requirements.requirements_extractor import RequirementsExtractor
 from app.translator.translator import RequirementsTranslator
+from app.features.features_extractor import SystemFeatureExtractor
 import time
+
+# Criar uma instância da classe VerbFinder
+verb_finder = VerbFinder()
 
 def main():
     key_list = [
@@ -28,44 +33,25 @@ def main():
     if not functional_entities:
         return print("\nNo entities could be extracted from the text!\n")
 
-    print("\n🔹 Entities Analyzed:")
-    for ent in functional_entities:
-        print(f"- {ent}")
-
-    print("\n" + "-" * 50)
-
-    # Extrair requisitos funcionais
+    print("\n🔹 Functional Requirements Extracted:")
     requirements_extractor = RequirementsExtractor(key_list)
     functional_requirements = requirements_extractor.extract_functional_requirements(texto)
 
-    print("\n🔹 Functional Requirements Extracted:")
     if functional_requirements:
         for idx, req in enumerate(functional_requirements, 1):
+            # Encontrar a palavra-chave correspondente no requisito
+            found_keyword = next((word for word in key_list if word in req.lower()), "N/A")
+
+            # Encontrar a frase completa a partir do verbo após a palavra-chave
+            full_sentence = verb_finder.find_verb_and_rest_of_sentence(req, found_keyword) if found_keyword != "N/A" else "N/A"
+
             print(f"{idx}. {req}")
+            print(f"   🔹 (Palavra-chave encontrada: **{found_keyword}**)")
+            print(f"   📝 The **{found_keyword}** {full_sentence}")
+            print("-" * 60)
             time.sleep(1)
     else:
         print("\nNo functional requirements could be extracted from the text!")
-        
-    traduzir = (
-        input("\nDeseja traduzir os requisitos para português? (y/n): ").strip().lower()
-    )
-
-    # Traduzir requisitos para português
-    if traduzir == "y":
-        requirements_translator = RequirementsTranslator()
-        translated_requirements = requirements_translator.translate_to_portuguese(
-            functional_requirements
-        )
-
-        print("\nRequisitos Funcionais (Traduzidos para Português):")
-
-        for req in translated_requirements:
-            time.sleep(1)
-            print(f"- {req}")
-
-        print("\n")
-    else:
-        print("\nNo functional requirements could be extracted from the text!\n")
 
 if __name__ == "__main__":
     main()
