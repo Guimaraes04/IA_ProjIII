@@ -1,24 +1,24 @@
 1. Inventory Management System
 
-The Warehouse at GlobalTech Manufacturing requires an inventory management system to track stock levels and improve efficiency. The system must integrate RFID scanners to automate the logging of incoming and outgoing materials. Additionally, the database server should store information about suppliers, products, and lot numbers. Alerts must be generated when stock levels fall below predefined thresholds, and the system should allow the inventory manager to create automated purchase orders to replenish stock.
+The Warehouse at GlobalTech Manufacturing requires an inventory management system to track stock levels and improve efficiency. The system must integrate RFID scanners to automate the logging of incoming and outgoing materials. Additionally, the database server saves information about suppliers, products, and lot numbers. Alerts must be generated when stock levels fall below predefined thresholds, and the inventory manager creates automated purchase orders to replenish stock.
 
 ----------------------------------------------------------------------
 
 2. Production Line Monitoring
 
-At GreenFactory, the production line requires a monitoring system to ensure operational efficiency. The sensors installed on the conveyor belts should provide real-time data to a central control room. The system must notify the maintenance team of any irregularities, such as temperature spikes or machine downtimes. Data from the PLC (Programmable Logic Controller) should be logged into the analytics platform for performance evaluation and process optimization.
+At GreenFactory, the production line requires a monitoring system to ensure operational efficiency. The sensors installed on the conveyor belts should provide real-time data to a central control room. The maintenance team notifies any irregularities, such as temperature spikes or machine downtimes. Data from the PLC (Programmable Logic Controller) should be logged into the analytics platform for performance evaluation and process optimization.
 
 ----------------------------------------------------------------------
 
 3. Energy Management Platform
 
-EcoFactory wants an energy management platform to optimize electricity usage across its manufacturing units. The platform should integrate smart meters installed in different departments, such as assembly and packaging. A central dashboard should display energy usage patterns and provide insights into reducing waste. The system should allow the energy manager to configure usage limits and automatically generate alerts when those limits are exceeded.
+EcoFactory wants an energy management platform to optimize electricity usage across its manufacturing units. The platform should integrate smart meters installed in different departments, such as assembly and packaging. A central dashboard displays energy usage patterns and provide insights into reducing waste. The energy manager configures usage limits and automatically generate alerts when those limits are exceeded.
 
 ----------------------------------------------------------------------
 
 4. Customer Feedback System
 
-TechPro Industries requires a customer feedback system for its after-sales support group. Data should be stored by a consultant in a centralized crm db and categorized by product type. A reporting tool should provide the quality assurance manager with insights into recurring issues, helping to prioritize product improvements and service enhancements.
+TechPro Industries requires a customer feedback system for its after-sales support group. The consultant saves data in a centralized crm db and categorized by product type. The assurance manager uses a reporting tool to get insights into recurring issues, helping to prioritize product improvements and service enhancements.
 
 ----------------------------------------------------------------------
 
@@ -37,7 +37,7 @@ Before starting a manufacturing order, a process planner defines the planned act
 
 6. 1º Exercício professor Miguel
 
-Mr. Asdrúbal has a traditional tavern, where he also sells some products. In his tavern, Mr. Asdrúbal keeps a list of his regular customers. These customers can spend money during the week and only pay in full at the end of the week. Whenever a new customer becomes a regular customer, a worker open a new customer file, where the various expenses incurred and payments made are recorded. Each expense is associated with a product sold (consumed), a quantity, and has a date, total value and indication of whether it has already been paid or not, and on what date. The accountant issues an invoice/receipt whenever a customer makes a payment for one or more charges on their account.
+Mr. Asdrúbal has a traditional tavern, where he also sells some products. In his tavern, Mr. Asdrúbal keeps a list of his regular customers. These customers can spend money during the week and only pay in full at the end of the week. Whenever a new customer becomes a regular customer, a worker opens a new customer file, where the various expenses incurred and payments made are recorded. Each expense is associated with a product sold (consumed), a quantity, and has a date, total value and indication of whether it has already been paid or not, and on what date. The accountant issues an invoice/receipt whenever a customer makes a payment for one or more charges on their account.
 In addition to the previous work, the accountant selects from a product table, which contains product information (name, unit price) and the quantity of that product in stock. Some restrictions imposed are: A customer can never have a total debt greater than €100; A customer should never have unpaid expenses for more than 15 days.
 
 ----------------------------------------------------------------------
@@ -50,7 +50,7 @@ When creating a new contract, the citizen provides their data and the data of th
 When delivering waste, the citizen goes to a large container at a collection point and, when bringing his/her personal container closer to the large collection container, the latter opens the lid automatically, only if the type of waste of both containers (the citizen's and the collection container) is the same.
 When the person dumps their container in the collection point container, an analyst records the weight of the deposited waste is recorded and, through artificial intelligence, it is analyzed and validated that the deposited waste is of the right type. In this case, an analyst creates a credit movement of points for the citizen, indicating the date and time of collection, weight and type of waste, and points earned. The points earned by each resident, for each Kg of waste collected, depends on the type of waste and must be defined in a table in the system.
 If the type of waste deposited is different from that for which the collector is intended, then an anomaly movement is created, where 20 points are deducted for each kg of waste deposited.
-A clerical worker can also create, list and modify waste collection routes, which are then selected at the start of a waste collection activity by the collection truck driver.
+A clerical worker creates, list and modify waste collection routes, which are then selected at the start of a waste collection activity by the collection truck driver.
 A collection point has different collectors for all types of waste.
 Before starting waste collection, the driver of the collection truck starts a collection activity in the system, where he selects the type of waste to be collected, as well as the route of collection points to be covered. The collection truck, in a collection activity, collects only one type of waste.
 One of the employees of the waste collection team, during a collection activity, records a collection movement in the system whenever the truck stops at a collection point and the waste is collected from a container.
