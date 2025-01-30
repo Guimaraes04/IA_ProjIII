@@ -59,4 +59,10 @@ One of the employees of the waste collection team, during a collection activity,
 
 YT Video
 
-https://www.youtube.com/watch?v=dSce20oYIPY 
+https://www.youtube.com/watch?v=dSce20oYIPY
+
+----------------------------------------------------------------------
+
+Instalar todos os imports 
+
+pip install -r requirements.txt
