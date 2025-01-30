@@ -1,7 +1,7 @@
 from app.verb.verb_extractor import VerbFinder 
 from app.entities.analyse_entities import AnalyseEntities
 from app.requirements.requirements_extractor import RequirementsExtractor
-from app.translator.translator import RequirementsTranslator  # Importa a classe de tradução
+from app.translator.translator import RequirementsTranslator
 from app.features.features_extractor import SystemFeatureExtractor
 import time
 
@@ -46,7 +46,7 @@ def main():
 
     print("\n🔹 Functional Requirements Extracted:")
     if functional_requirements:
-        extracted_entities = []  # Lista para armazenar entidades extraídas
+        extracted_entities = []
 
         for idx, req in enumerate(functional_requirements, 1):
             found_keyword = next((word for word in key_list if word in req.lower()), "N/A")
@@ -56,10 +56,10 @@ def main():
             print(f"   🔹 (Palavra-chave encontrada: **{found_keyword}**)")
             print(f"   📝 The **{found_keyword}** {full_sentence}")
             print("-" * 60)
-            extracted_entities.append(req)  # Adiciona à lista de entidades
+            extracted_entities.append(req)
             time.sleep(1)
 
-        # Perguntar ao usuário se deseja traduzir as entidades extraídas
+        # Traduzir para portugues as entidades extraídas
         traduzir_entidades = input("\nDeseja traduzir as entidades extraídas para português? (y/n): ").strip().lower()
         if traduzir_entidades == "y":
             translated_entities = translator.translate_to_portuguese(extracted_entities)
@@ -70,7 +70,7 @@ def main():
     else:
         print("\nNo functional requirements could be extracted from the text!")
 
-    # Perguntar ao usuário se deseja listar as features
+    
     listar_features = input("\nDeseja listar as features do sistema? (y/n): ").strip().lower()
 
     if listar_features == "y":
@@ -78,7 +78,7 @@ def main():
         system_features = feature_extractor.extract_features(texto)
 
         print("\n🔹 System Features Identified:")
-        extracted_features = []  # Lista para armazenar features extraídas
+        extracted_features = []
 
         if system_features:
             for idx, feature in enumerate(system_features, 1):
@@ -86,10 +86,10 @@ def main():
                 print(f"{idx}. {feature}")
                 print(f"   🔹 (Feature encontrada: **{found_keyword}**)")
                 print("-" * 60)
-                extracted_features.append(feature)  # Adiciona à lista de features
+                extracted_features.append(feature)
                 time.sleep(1)
 
-            # Perguntar ao usuário se deseja traduzir as features extraídas
+            # Traduzir para portugues as features extraídas
             traduzir_features = input("\nDeseja traduzir as features extraídas para português? (y/n): ").strip().lower()
             if traduzir_features == "y":
                 translated_features = translator.translate_to_portuguese(extracted_features)

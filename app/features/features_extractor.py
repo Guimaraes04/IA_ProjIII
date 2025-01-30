@@ -12,7 +12,7 @@ class SystemFeatureExtractor:
         for sent in doc.sents:
             tokens = [token.text.lower() for token in sent]
             
-            # Se a frase contiver uma feature relevante, extraímos
+            # Extrair se a frase contiver uma feature relevante
             if any(word in tokens for word in self.key_features):
                 system_features.append(sent.text.strip())
 

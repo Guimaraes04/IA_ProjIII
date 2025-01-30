@@ -10,8 +10,8 @@ class RequirementsExtractor:
         doc = self.nlp(text)  # Processar o texto
         requirements = []
 
-        for sent in doc.sents:  # Iterar por frases
-            tokens = [token.text.lower() for token in sent]  # Converter tokens para lowercase
+        for sent in doc.sents:
+            tokens = [token.text.lower() for token in sent]
             
             # Se a frase contém pelo menos uma palavra-chave, adicionamos como requisito funcional
             if any(word in tokens for word in self.key_list):
