@@ -15,8 +15,8 @@ async def main():
     key_list = [
         "managers", "scanners", "company", "database", "stakeholders", "server", "maintenances", 
         "automation", "manager", "branch", "sensors", "team", "subsidiary", "dashboard", "consultant", 
-        "productions", "tool", "trace", "specialist", "tailor", "planner", "worker", "analyst", 
-        "enterprise", "person", "driver", "shipping", "employees", "compliance", "accountant", "receive"
+        "productions", "tool", "specialist", "tailor", "planner", "worker", "analyst", 
+        "enterprise", "person", "driver", "shipping", "employees", "compliance", "accountant"
     ]
 
     key_features = [
@@ -49,7 +49,7 @@ async def main():
             full_sentence = verb_finder.find_verb_and_rest_of_sentence(req, found_keyword) if found_keyword != "N/A" else "N/A"
 
             print(f"{idx}. {req}")
-            print(f"   🔹 (Palavra-chave encontrada: **{found_keyword}**)")
+            print(f"   🔹 (Keyword detected: **{found_keyword}**)")
             print(f"   📝 The **{found_keyword}** {full_sentence}")
             print("-" * 60)
             extracted_entities.append(req)
@@ -80,7 +80,7 @@ async def main():
             for idx, feature in enumerate(system_features, 1):
                 found_keyword = next((word for word in key_features if word in feature.lower()), "N/A")
                 print(f"{idx}. {feature}")
-                print(f"   🔹 (Feature encontrada: **{found_keyword}**)")
+                print(f"   🔹 (Feature detected: **{found_keyword}**)")
                 print("-" * 60)
                 extracted_features.append(feature)
                 time.sleep(1)

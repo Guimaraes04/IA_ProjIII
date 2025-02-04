@@ -13,8 +13,8 @@ def main():
     key_list = [
         "managers", "scanners", "company", "database", "stakeholders", "server", "maintenances", 
         "automation", "manager", "branch", "sensors", "team", "subsidiary", "dashboard", "consultant", 
-        "productions", "tool", "trace", "specialist", "tailor", "planner", "worker", "analyst", 
-        "enterprise", "person", "driver", "shipping", "employees", "compliance", "accountant", "receive"
+        "productions", "tool", "specialist", "tailor", "planner", "worker", "analyst", 
+        "enterprise", "person", "driver", "shipping", "employees", "compliance", "accountant"
     ]
 
     key_features = [
@@ -48,12 +48,12 @@ def main():
     system_features = feature_extractor.extract_features(texto)
 
     while True:
-        print("\n📌 Escolha uma opção:")
-        print("1️⃣  Listar os requisitos funcionais encontrados")
-        print("2️⃣  Listar as features do sistema encontradas")
-        print("3️⃣  Sair")
+        print("\n📌 Select an option:")
+        print("1️⃣  List the functional requirements found")
+        print("2️⃣  List the system features found")
+        print("3️⃣  Leave the program")
 
-        opcao = input("Insira a opção desejada (1/2/3): ").strip()
+        opcao = input("Enter the desired option (1/2/3): ").strip()
 
         if opcao == "1":
             if functional_requirements:
@@ -65,14 +65,14 @@ def main():
                     full_sentence = verb_finder.find_verb_and_rest_of_sentence(req, found_keyword) if found_keyword != "N/A" else "N/A"
 
                     print(f"{idx}. {req}")
-                    print(f"   🔹 (Palavra-chave encontrada: **{found_keyword}**)")
+                    print(f"   🔹 (Keyword detected: **{found_keyword}**)")
                     print(f"   📝 The **{found_keyword}** {full_sentence}")
                     print("-" * 60)
                     extracted_entities.append(req)
                     time.sleep(1)
 
                 # Perguntar se deseja traduzir
-                traduzir = input("\nDeseja traduzir os requisitos para português? (y/n): ").strip().lower()
+                traduzir = input("\nDo you want to translate the requirements into Portuguese? (y/n): ").strip().lower()
                 if traduzir == "y":
                     translated_entities = translator.translate_to_portuguese(extracted_entities)
                     print("\n🔹 Requisitos Funcionais (Traduzidos para Português):")
@@ -80,7 +80,7 @@ def main():
                         print(f"- {entity}")
                     print("-" * 60)
             else:
-                print("\nNenhum requisito funcional foi extraído do texto!")
+                print("\nNo functional requirements could be extracted from the text!")
 
         elif opcao == "2":
             if system_features:
@@ -90,7 +90,7 @@ def main():
                 for idx, feature in enumerate(system_features, 1):
                     found_keyword = next((word for word in key_features if word in feature.lower()), "N/A")
                     print(f"{idx}. {feature}")
-                    print(f"   🔹 (Feature encontrada: **{found_keyword}**)")
+                    print(f"   🔹 (Feature detected: **{found_keyword}**)")
                     print("-" * 60)
                     extracted_features.append(feature)
                     time.sleep(1)
@@ -104,14 +104,14 @@ def main():
                         print(f"- {feature}")
                     print("-" * 60)
             else:
-                print("\nNenhuma feature do sistema foi extraída do texto!")
+                print("\nNo system features could be extracted from the text!")
 
         elif opcao == "3":
-            print("\n✅ A sair do programa...")
+            print("\n✅ Leaving the program...")
             break
 
         else:
-            print("\n⚠️ Opção inválida! Tente novamente.")
+            print("\n⚠️ Invalid option! Please try again.")
 
 if __name__ == "__main__":
     main()
