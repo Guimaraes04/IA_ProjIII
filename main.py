@@ -30,7 +30,7 @@ def main():
         "collection route", "truck driver", "points system", "anomaly detection", "credit movement"
     ]
 
-    print("Insira o texto a ser analisado (cole o texto e pressione Enter duas vezes para analisar): ")
+    print("Enter the text and press the Enter key on your keyboard to analyze: ")
     linhas = []
     while True:
         linha = input()
@@ -40,7 +40,7 @@ def main():
 
     texto = "\n".join(linhas)
 
-    # Criar instâncias dos extratores
+    # Criar instâncias dos extrators
     requirements_extractor = RequirementsExtractor(key_list)
     feature_extractor = SystemFeatureExtractor(key_features)
 
@@ -111,7 +111,7 @@ def main():
             break
 
         else:
-            print("\n⚠️ Invalid option! Please try again.")
+            print("\n⚠️  Invalid option! Please try again.")
 
 if __name__ == "__main__":
     main()
