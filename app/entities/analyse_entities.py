@@ -7,6 +7,7 @@ class AnalyseEntities:
         self.bow = CountVectorizer(stop_words='english')
 
     def extract(self):
+        # Criar a matriz de termos do documento apenas para teoria
         X = self.bow.fit_transform(self.requirements)
         feature_names = self.bow.get_feature_names_out()
         
